@@ -6,6 +6,7 @@ function! ToggleModifiable()
     endif
 endfunction
 
+
 function! ToggleConcealLevel()
     if &conceallevel == 0
         setlocal conceallevel=2
@@ -15,7 +16,6 @@ function! ToggleConcealLevel()
 endfunction
 
 
-colorscheme sublimemonokai
 function! ChangeColor()
 if g:colors_name==# 'sublimemonokai'
     set background=light
@@ -26,10 +26,6 @@ elseif g:colors_name==# 'github'
     colorscheme sublimemonokai
   endif
 endfunction
-nmap <silent> ;c :call ChangeColor()<CR>
-
-au BufNewFile,BufRead *.snk set syntax=snakemake
-set syntax=snakemake
 
 
 function RenameFile()
@@ -91,3 +87,4 @@ function MoveToNextTab()
   "opening current buffer in new window
   exe "b".l:cur_buf
 endfunc
+" https://stackoverflow.com/questions/14688536/move-adjacent-tab-to-split

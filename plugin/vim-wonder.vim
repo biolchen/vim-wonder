@@ -87,4 +87,3 @@ function MoveToNextTab()
   "opening current buffer in new window
   exe "b".l:cur_buf
 endfunc
-" https://stackoverflow.com/questions/14688536/move-adjacent-tab-to-split
